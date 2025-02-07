@@ -34,7 +34,6 @@ public class SearchPage {
         return Integer.parseInt(driver.findElement(centerCount).getText());
     }
 
-
     public int getListOfAllCenterFound() {
         return driver.findElements(centerList).size();
     }
