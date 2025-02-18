@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c4ae95-4bbf-481a-b968-3f24b485e0a2" name="Changes" comment="Pushing Automation Assignment">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commonUtils/WebDriverUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commonUtils/WebDriverUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/webPages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/webPages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webPages/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/brightHorizons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/brightHorizons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/brightHorizons.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/brightHorizons.feature" afterDir="false" />
+    <list default="true" id="b7c4ae95-4bbf-481a-b968-3f24b485e0a2" name="Changes" comment="Pushing TC01 related changesAutomation Assignment">
+      <change beforePath="$PROJECT_DIR$/TestAutomationResults/AutomationReport 07_Feb_2025_22_30_35/TestReport/AutomationExecutionReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAutomationResults/AutomationReport 07_Feb_2025_22_30_35/screenshots/Login Successful_20250207_223043.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAutomationResults/AutomationReport 07_Feb_2025_22_30_35/screenshots/_20250207_223105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAutomationResults/AutomationReport 07_Feb_2025_22_30_35/screenshots/user_clicks_first_center_20250207_223110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestAutomationResults/AutomationReport 07_Feb_2025_22_30_35/screenshots/verify_center_details_20250207_223110.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,13 +239,22 @@
       <option name="project" value="LOCAL" />
       <updated>1738948041841</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pushing TC01 related changesAutomation Assignment">
+      <option name="closed" value="true" />
+      <created>1739854331277</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739854331277</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pushing FIS Global API and UI related Automation Assignment" />
     <MESSAGE value="Pushing Automation Assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pushing Automation Assignment" />
+    <MESSAGE value="Pushing TC01 related changesAutomation Assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pushing TC01 related changesAutomation Assignment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
