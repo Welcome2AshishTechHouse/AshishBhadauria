@@ -11,7 +11,6 @@ import java.time.Duration;
 
 public class WebDriverUtil {
     private static WebDriver driver;
-    private static WebDriverWait wait;
 
     public static WebDriver getDriver() {
         if (driver == null) {
@@ -25,7 +24,14 @@ public class WebDriverUtil {
         return driver;
     }
 
-    public static void waitVisibilityOfElementLocated(By locator) {
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
+    }
+
+        public static void waitVisibilityOfElementLocated(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
     }

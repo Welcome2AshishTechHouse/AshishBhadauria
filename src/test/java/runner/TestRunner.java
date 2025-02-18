@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         dryRun = false,
         monochrome = true,
-        tags="@Test_SearchChildCareCenter"
+        tags="@Test_BrightHorizons"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 }

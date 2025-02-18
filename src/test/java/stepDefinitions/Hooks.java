@@ -15,6 +15,6 @@ public class Hooks {
 
     @After
     public void afterEachScenario(){
-        WebDriverUtil.getDriver().quit();
+        WebDriverUtil.quitDriver();
     }
 }

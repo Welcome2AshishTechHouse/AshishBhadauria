@@ -3,9 +3,7 @@ package stepDefinitions;
 
 import commonUtils.ScreenshotUtils;
 import commonUtils.WebDriverUtil;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import projectManager.PropertyManager;
@@ -17,17 +15,23 @@ import java.util.Objects;
 
 public class brightHorizons {
 
-    WebDriver driver = WebDriverUtil.getDriver();
-    HomePage homePage = new HomePage(driver);
-    SearchPage searchPage = new SearchPage(driver);
+
     int displayedCentersCounts;
     String selectedCenterName;
     String selectedCenterAddress;
-    ScreenshotUtils screenshotUtils = new ScreenshotUtils(driver);
+    WebDriver driver;
+    HomePage homePage;
+    SearchPage searchPage;
+    ScreenshotUtils screenshotUtils;
+
 
 
     @Given("User is on {string} home page")
     public void user_is_on_home_page(String systemName) {
+        driver = WebDriverUtil.getDriver();
+        homePage = new HomePage(driver);
+        searchPage = new SearchPage(driver);
+        screenshotUtils = new ScreenshotUtils(driver);
         String bh_url =  PropertyManager.getInstance().getProperty(systemName+".url");
         driver.get(bh_url);
         ScenarioManager.getInstance().getScenario().log("Login to URL : <pre>"+systemName+"</pre> \nUsing this Url :<pre>"+bh_url+"</pre>");
@@ -79,4 +83,45 @@ public class brightHorizons {
         ScenarioManager.getInstance().getScenario().log("Validation completed for center name and address are the same on the list and popup");
         screenshotUtils.captureScreenshot("verify_center_details");
     }
+
+    @When("User click on the search icon")
+    public void user_click_on_the_search_loop_icon() {
+        homePage.clickSearchIcon();
+        ScenarioManager.getInstance().getScenario().log("User clicks on the Search Icon");
+        screenshotUtils.captureScreenshot("user_clicks_search_icon");
+    }
+
+    @Then("User should see the search field")
+    public void User_should_see_the_search_field() {
+        assert(searchPage.isSearchFieldDisplayed());
+        ScenarioManager.getInstance().getScenario().log("User should see the search field");
+        screenshotUtils.captureScreenshot("Search_field_displayed");
+    }
+
+    String expectedQuery;
+    @When("User enter {string} into the search field")
+    public void User_enter_into_the_search_field(String query) {
+        this.expectedQuery = query;
+        searchPage.enterSearchQuery(query);
+        ScenarioManager.getInstance().getScenario().log("User enter Query in the search field \n Query: <pre>"+query+"</pre>");
+        screenshotUtils.captureScreenshot("User_enter_into_the_search_field");
+    }
+
+    @And("User click on the Search button")
+    public void User_click_on_the_Search_button() {
+        searchPage.clickSearchButton();
+        ScenarioManager.getInstance().getScenario().log("User click on the Search button");
+        screenshotUtils.captureScreenshot("User_click_on_the_Search_button");
+    }
+
+    @Then("Validate first search result should match the search query")
+    public void validate_first_search_result_should_match_the_search_query() {
+        String firstResultText = searchPage.getFirstResultText().trim();
+        assert(firstResultText.equals(expectedQuery));
+        ScenarioManager.getInstance().getScenario().log("Validation first search result should match the search query: <pre> Expected Result : "+expectedQuery+"</pre> \n <pre> Actual Result : "+firstResultText+"</pre> ");
+        screenshotUtils.captureScreenshot("validate_first_search_result_should_match_the_search_query");
+
+    }
+
+
 }
