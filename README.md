@@ -66,8 +66,9 @@
 
 1. **Clone the repository**
     ```bash
-    git clone https://github.com/your-repo/bright-horizon-automation.git
-    cd bright-horizon-automation
+    git clone https://github.com/Welcome2AshishTechHouse/AshishBhadauria.git
+    git clone .git
+    cd BrightHorizonsAutomation
     ```
 
 2. **Install dependencies**
@@ -82,7 +83,7 @@
 
     or using tags
     ```bash
-    mvn test -Dcucumber.options="--tags @search"
+    mvn test -Dcucumber.options="--tags @Test_BrightHorizons"
     ```
 
 ## 📊 Test Reports
